@@ -12,8 +12,8 @@
 
 (task-options!
  pom {:project 'tempcreds
-      :url "https://bitbucket.org/inindca/stuff"
-      :version "1.1"
+      :url "https://github.com/dysmento/tempcreds"
+      :version "1.2"
       :description "A small library for setting local temporary credentials for AWS using an MFA device."
       :license {"Apache License" "http://opensource.org/licenses/Apache-2.0"}}
  aot {:all true}
