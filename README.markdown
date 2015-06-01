@@ -10,7 +10,7 @@
 
 Leiningen dependency:
 
-    [tempcreds "1.1"]
+    [tempcreds "1.2"]
     
 Usage:
 
