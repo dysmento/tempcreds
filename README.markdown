@@ -14,7 +14,9 @@ Leiningen dependency:
     
 Usage:
 
-    (require '[tempcreds :refer [tempcreds]])
-    (tempcreds profile serialno mfatoken)
+```clojure
+(require '[tempcreds :refer [tempcreds]])
+(tempcreds profile serialno mfatoken)
+```
     
 Where `profile` is the section of your `~/.aws/credentials` file with the non-MFA credentials you're going to use for the request. `serialno` is the serial number of your MFA device, like `arn:aws:iam::123123123123123:mfa/bob.builder`. And `mfatoken` is the current six-digit code showing on your MFA device.
