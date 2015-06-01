@@ -1,0 +1,23 @@
+#!/usr/bin/env boot
+
+(set-env! :dependencies
+          '[[tempcreds "LATEST"]])
+
+(require
+ '[tempcreds :refer [tempcreds]]
+ '[boot.cli :as cli])
+
+(cli/defclifn -main
+  "Establishes temporary AWS credentials in your ~/.aws/credentials file when you supply
+   an MFA device serial number and the current MFA device token.
+
+   You'll also provide the name of the profile to use, which is the section of your
+   credentials file from which to pull the base credentials to use for the AWS
+   temporary session request.
+
+   USAGE: tempcreds [profile] [mfa-serial-no] [mfa-current-token]"
+  []
+  (let [profile (get *args* 0)
+        serialno (get *args* 1)
+        token (get *args* 2)]
+    (tempcreds profile serialno token)))
