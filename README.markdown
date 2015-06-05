@@ -31,7 +31,7 @@ With boot, you can write shell scripts in [clojure][3] simply by having boot ins
     
 So at the root of this project is a file called `tempcreds` and it is the shell script I made to do this temporary credentials thing. I could put all the code in this file if I wanted, but boot lets you declare dependencies right in the script, which means you can keep your scripts from getting unwieldy by publishing your own code as artifacts into a maven-style repository, and then declare that as a dependency in the script. That's what I've done here.
 
-What's awesome is that if you want to redistribute one of scripts, you don't have to include all the other files. In this case, I could send someone just the `tempcreds` file, and as long as I can assume they have boot installed plus a JDK, the script will take care of the whole rest of the dependency tree.
+What's awesome is that if you want to redistribute one of your scripts, you don't have to include all the other files. In this case, I could send someone just the `tempcreds` file, and as long as I can assume they have boot installed plus a JDK, the script will take care of the whole rest of the dependency tree.
 
 Since I want to build and deploy an artifact, I have a `build.boot` file to help facilitate that. Most of `build.boot` is about defining the project object model (also known as the [maven pom file][4]) and declaring the settings for the repository I want to publish to. To build the artifact, just this command from the project directory:
 
