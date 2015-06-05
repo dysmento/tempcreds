@@ -33,7 +33,7 @@ So at the root of this project is a file called `tempcreds` and it is the shell 
 
 What's awesome is that if you want to redistribute one of your scripts, you don't have to include all the other files. In this case, I could send someone just the `tempcreds` file, and as long as I can assume they have boot installed plus a JDK, the script will take care of the whole rest of the dependency tree.
 
-Since I want to build and deploy an artifact, I have a `build.boot` file to help facilitate that. Most of `build.boot` is about defining the project object model (also known as the [maven pom file][4]) and declaring the settings for the repository I want to publish to. To build the artifact, just this command from the project directory:
+Since I want to build and deploy an artifact, I have a `build.boot` file to help facilitate that. Most of `build.boot` is about defining the project object model (also known as the [maven pom file][4]) and declaring the settings for the repository I want to publish to. To build the artifact, just run this command from the project directory:
 
     boot build
 
